@@ -1,12 +1,18 @@
-.env
-backend/.env
-frontend/.env
-backend/.venv/
-frontend/node_modules/
-frontend/.next/
-
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
+*.pyo
 
+# venv
+.venv/
+venv/
+
+# env secrets
+.env
+
+# OS/IDE
+.vscode/
+.DS_Store
+
+# DB files (თუ მოგვიანებით დაგემატება)
+*.sqlite3
