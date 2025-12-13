@@ -48,6 +48,7 @@ if config.config_file_name is not None:
 # ------------------------------------------------------------
 from app.models.base import Base  # noqa: E402
 from app.models.user import User  # noqa: F401, E402
+from app.models.property import Property  # noqa: F401, E402
 
 target_metadata = Base.metadata
 
