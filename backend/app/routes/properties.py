@@ -261,6 +261,6 @@ async def delete_property(
     if not prop:
         raise HTTPException(status_code=404, detail="Property not found")
 
-    db.delete(prop)
+    await db.delete(prop)   # ✅ ეს იყო მთავარი
     await db.commit()
     return None
