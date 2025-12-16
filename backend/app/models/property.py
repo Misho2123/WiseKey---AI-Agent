@@ -34,4 +34,15 @@ class Property(Base):
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)
 
+    # Comfort / Infrastructure
+    building_type = Column(String(50), nullable=True)      # new_building / old_building / private_house
+    heating_type = Column(String(50), nullable=True)       # central / gas / electric / none
+    has_air_conditioning = Column(Boolean, nullable=True)
+
+    parking_type = Column(String(50), nullable=True)       # underground / yard / street / none
+    has_balcony = Column(Boolean, nullable=True)
+    pets_allowed = Column(Boolean, nullable=True)
+    furnished = Column(String(20), nullable=True)          # full / partial / empty
+
+
     owner_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)

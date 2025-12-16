@@ -28,6 +28,17 @@ class PropertyCreate(BaseModel):
 
     condition: Optional[str] = None  # black_frame/white_frame/green_frame/old_renov/new_renov
 
+    # Comfort / Infrastructure
+    building_type: Optional[str] = None
+    heating_type: Optional[str] = None
+    has_air_conditioning: Optional[bool] = None
+
+    parking_type: Optional[str] = None
+    has_balcony: Optional[bool] = None
+    pets_allowed: Optional[bool] = None
+    furnished: Optional[str] = None
+
+
     description: Optional[str] = None
 
 
@@ -56,6 +67,17 @@ class PropertyResponse(BaseModel):
     not_first_floor: Optional[bool] = None
 
     condition: Optional[str] = None
+
+    # Comfort / Infrastructure
+    building_type: Optional[str] = None
+    heating_type: Optional[str] = None
+    has_air_conditioning: Optional[bool] = None
+
+    parking_type: Optional[str] = None
+    has_balcony: Optional[bool] = None
+    pets_allowed: Optional[bool] = None
+    furnished: Optional[str] = None
+
 
     description: Optional[str] = None
     owner_id: int
